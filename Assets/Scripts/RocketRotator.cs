@@ -12,17 +12,26 @@ public class RocketRotator : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            transform.rotation *= Quaternion.Euler(Vector3.forward * speed * Time.deltaTime);
+            RotLeft();
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.rotation *= Quaternion.Euler(Vector3.back * speed * Time.deltaTime);
+            RotRight();
         }
+    }
+
+    void RotLeft()
+    {
+        transform.rotation *= Quaternion.Euler(Vector3.forward * speed * Time.deltaTime);
+    }
+
+    void RotRight()
+    {
+        transform.rotation *= Quaternion.Euler(Vector3.back * speed * Time.deltaTime);
     }
 }

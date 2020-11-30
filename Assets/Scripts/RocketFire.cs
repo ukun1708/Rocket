@@ -19,7 +19,7 @@ public class RocketFire : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (StartRocket.Singletone.isPressed == true)
         {

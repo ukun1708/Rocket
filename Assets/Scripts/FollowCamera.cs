@@ -10,7 +10,7 @@ public class FollowCamera : MonoBehaviour
 
     public Vector3 offset = new Vector3(0, 2, -5);
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, target.position + offset, Time.deltaTime * smooth);
 
